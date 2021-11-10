@@ -66,7 +66,7 @@ library strings {
      * @param self The string to make a slice from.
      * @return A newly allocated slice containing the entire string.
      */
-    function toSlice(string memory self) internal pure returns (slice memory) {
+    function toSlice(string memory self) internal pure returns (slice memory) public {
         uint ptr;
         assembly {
             ptr := add(self, 0x20)
